@@ -1,0 +1,205 @@
+/* Css Sıfırlama  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.main {
+  background-image: url(./TR-tr-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+  height: 644px;
+  background-position: center center;
+  background-size: max(1200px, 100vw);
+  position: relative;
+  background-repeat: no-repeat;
+}
+.main .box {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  width: 100%;
+  height: 644px;
+  opacity: 0.6;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60vw; /* 60 vw dediğimiz ekranın %60'ına karşılık gelir.Max-width ise maxiumum genişlik demektir.*/
+  margin: auto;
+  height: 100px;
+}
+.nav img {
+  width: 130px;
+}
+.nav span {
+  z-index: 10;
+}
+.nav .buttons {
+  z-index: 10;
+}
+.btn {
+  padding: 3px 8px;
+  background-color: rgba(248, 243, 243, 0.021);
+  color: white;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid white;
+  font-size: 16px;
+}
+
+.btn-red {
+  background-color: red;
+}
+/* Hero Alanı */
+.hero {
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 30px;
+  height: calc(100vh-100px);
+  /* calc metodu hesaplama yaparken kullanılır.Burada height olarak 100% kapla ama nav kısmına 100 px ini de hesaba kat demiş olduk */
+}
+.hero > :nth-child(1) {
+  font-size: 50px;
+  font-weight: bold;
+}
+.hero > :nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.hero > :nth-child(3) {
+  font-size: 20px;
+  font-weight: 400px;
+  text-align: center;
+}
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-self: center;
+}
+.hero-buttons:nth-child(1) {
+  padding: 7px 101px 8px 14px;
+  font-size: 12px;
+  outline: none;
+  background-color: black;
+  border: 1px solid rgba(179, 179, 179);
+  border-radius: 4px;
+}
+
+.hero-buttons:nth-child(2) {
+  padding: 8px, 24px;
+  font-size: 17px;
+}
+.seperation {
+  border: 3px solid rgba(54 54 54);
+}
+.first {
+  color: white;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
+  margin: auto;
+}
+
+.secImg {
+  position: relative;
+}
+
+.secImg img {
+  width: 555px;
+  position: relative;
+  z-index: 10;
+}
+.secImg video {
+  position: absolute;
+  right: 10px;
+  top: 50px;
+}
+
+.first h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.first p {
+  font-size: 24px;
+  margin-top: 10px;
+}
+/* Sıkça sorulan sorular alanı */
+
+.faq {
+  color: white;
+  padding: 35px;
+}
+.faq h2 {
+  text-align: center;
+  font-size: 48px;
+}
+.faq-box {
+  background-color: #272727;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  margin: 34px auto;
+  cursor: pointer;
+  max-width: 60vw;
+  transition: all0.3s;
+}
+.faq-box:hover {
+  background-color: rgb(23, 23, 23);
+}
+/* Footer Alanı */
+.footer {
+  color: white;
+  max-width: 60vw;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.footer .questions {
+  padding: 34px 0;
+  font-size: 25px;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-item {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-item a {
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.footer .footer-item a:hover{
+color: rgb(197,41,41);
+}
+/* Responsive Tasarım */
+@media (max-width: 1300px) {
+  .first {
+    flex-direction: column;
+    text-align: center;
+  }
+  .first h1 {
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  .first p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
